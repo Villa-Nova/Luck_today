@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+button, .cookie {
+  cursor: pointer;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-body: linear-gradient(194deg, hsl(284, 100%, 50%) 0%, hsl(254, 94%, 20%) 100%);
+  --bg-main: #FFFFFF;
+  --bg-phrase: #E4EDF1;
+  --bg-btn: #FF9500;
+
+
+  --shadow: hsl(0, 0%, 0%);
+  --shadow-luck: rgba(85, 85, 85, 0.5);
+
+  --fc-body: hsl(238, 27%, 28%);
+
+  --ff-title: 'Montserrat', sans-serif;
+  --ff-luck: 'Dancing Script', cursive;
+  --ff-body: 'DM Sans', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+
+  background: var(--bg-body);
+  background-repeat: unset;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: var(--bg-main);
+  color: var(--fc-body);
+  box-shadow: 0 2rem 5rem 0 var(--shadow);
+
+  font-family: var(--ff-body);
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-align: center;
+
+  padding: 6.4rem;
+
+  border-radius: .5rem;
+}
+
+.container {
+  display: grid;
+}
+
+.header {
+  max-width: 26rem;
+
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-family: var(--ff-title);
+  font-weight: 700;
+  font-size: 2.4rem;
+
+  margin-bottom: 1.4rem;
+}
+
+.cookie:hover {
+  animation: vibrate .3s ease 0s infinite normal forwards;
+}
+
+@keyframes vibrate {
+	0% {
+		transform: translate(0);
+	}
+
+	20% {
+		transform: translate(-2px, 2px);
+	}
+
+	40% {
+		transform: translate(-2px, -2px);
+	}
+
+	60% {
+		transform: translate(2px, 2px);
+	}
+
+	80% {
+		transform: translate(2px, -2px);
+	}
+
+	100% {
+		transform: translate(0);
+	}
+}
+
+.headerTwo {
+  width: 29.7rem;
+}
+
+.box_phrase {
+  background-color: var(--bg-phrase);
+  box-shadow: .2rem .2rem var(--shadow-luck);
+
+  padding: 1rem;
+
+  font-family: var(--ff-luck);
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  text-align: center;
+  word-wrap: break-word;
+
+  animation: luck 2.7s ease 0.3s 1 normal forwards;
+  opacity: 0;
+}
+
+.cookie_revelation {
+  margin: 6rem 0 5rem;
+}
+
+.try {
+  background-color: var(--bg-btn);
+  color: var(--bg-main);
+
+  font-family: var(--ff-body);
+  font-weight: 700;
+
+  padding: 1.6rem;
+  border: none;
+  border-radius: .5rem;
+
+  justify-self: center;
+
+  transition: all 0.3s;
+}
+
+.try:hover {
+  transform: scale(1.1);
+  box-shadow: 0 .2rem .3rem 0 hsl(0, 0%, 0%);
+}
+
+@keyframes luck {
+	0% {
+    opacity: 0.5;
+    transform: scale(0);
+		transform-origin: 50% 350%;
+	}
+  
+	100% {
+    opacity: 1;
+		transform: scale(1);
+		transform-origin: 50% 100%;
+	}
+}
